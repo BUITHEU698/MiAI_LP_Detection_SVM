@@ -90,6 +90,7 @@ if (len(LpImg)):
 
                 # Tach so va predict
                 curr_num = thre_mor[y:y+h,x:x+w]
+                
                 curr_num = cv2.resize(curr_num, dsize=(digit_w, digit_h))
                 _, curr_num = cv2.threshold(curr_num, 30, 255, cv2.THRESH_BINARY)
                 curr_num = np.array(curr_num,dtype=np.float32)
